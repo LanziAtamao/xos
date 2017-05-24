@@ -6,7 +6,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Clean Blog
+    title #{title} &raquo; sounton.me
     // Bootstrap Core CSS
     link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
     // Theme CSS
@@ -30,16 +30,16 @@ html(lang='en')
             span.sr-only Toggle navigation
             |                     Menu 
             i.fa.fa-bars
-          a.navbar-brand(href='index.html') Start Bootstrap
+          a.navbar-brand(href='index.html') #{site}
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='index.html') Home
+              a(href='index.html') Accueil
             li
-              a(href='about.html') About
+              a(href='about.html') A Propos
             li
-              a(href='post.html') Sample Post
+              a(href='post.html') Categories
             li
               a(href='contact.html') Contact
         // /.navbar-collapse
@@ -51,55 +51,14 @@ html(lang='en')
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
             .site-heading
-              h1 Clean Blog
+              h1 #{site}
               hr.small
-              span.subheading A Clean Blog Theme by Start Bootstrap
+              span.subheading La Ferme de la Science et de la Digitalisation
     // Main Content
     .container
       .row
         .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-          .post-preview
-            a(href='post.html')
-              h2.post-title
-                | Man must explore, and this is exploration at its greatest
-              h3.post-subtitle
-                | Problems look mighty small from 150 miles up
-            p.post-meta
-              | Posted by 
-              a(href='#') Start Bootstrap
-              |  on September 24, 2014
-          hr
-          .post-preview
-            a(href='post.html')
-              h2.post-title
-                | I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-            p.post-meta
-              | Posted by 
-              a(href='#') Start Bootstrap
-              |  on September 18, 2014
-          hr
-          .post-preview
-            a(href='post.html')
-              h2.post-title
-                | Science has not yet mastered prophecy
-              h3.post-subtitle
-                | We predict too much for the next year and yet far too little for the next ten.
-            p.post-meta
-              | Posted by 
-              a(href='#') Start Bootstrap
-              |  on August 24, 2014
-          hr
-          .post-preview
-            a(href='post.html')
-              h2.post-title
-                | Failure is not an option
-              h3.post-subtitle
-                | Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-            p.post-meta
-              | Posted by 
-              a(href='#') Start Bootstrap
-              |  on July 8, 2014
-          hr
+          block content
           // Pager
           ul.pager
             li.next
@@ -126,7 +85,7 @@ html(lang='en')
                   span.fa-stack.fa-lg
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-github.fa-stack-1x.fa-inverse
-            p.copyright.text-muted Copyright © Your Website 2016
+            p.copyright.text-muted Copyright © Hodonou Sounton 2016 - #{current}
     // jQuery
     script(src='vendor/jquery/jquery.min.js')
     // Bootstrap Core JavaScript

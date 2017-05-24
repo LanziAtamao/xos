@@ -9,7 +9,7 @@ var posts = require('./lib/posts')
 var users = require('./lib/users')
 
 
-// Global variables
+// Express Instanciated
 var app = express();
 
 // Fire up the applications
