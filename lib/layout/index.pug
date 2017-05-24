@@ -4,8 +4,8 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content='')
-    meta(name='author', content='')
+    meta(name='description', content=description)
+    meta(name='author', content=author)
     title #{title} &raquo; sounton.me
     // Bootstrap Core CSS
     link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
@@ -85,7 +85,7 @@ html(lang='en')
                   span.fa-stack.fa-lg
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-github.fa-stack-1x.fa-inverse
-            p.copyright.text-muted Copyright © Hodonou Sounton 2016 - #{current}
+            p.copyright.text-muted Copyright © #{author} 2016 - #{current}
     // jQuery
     script(src='vendor/jquery/jquery.min.js')
     // Bootstrap Core JavaScript
