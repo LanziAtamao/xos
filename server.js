@@ -15,7 +15,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 // Require Application
 var posts = require('./lib/posts')
-var users = require('./lib/users')
+var account = require('./lib/account')
 
 // Express Instanciated
 var app = express();
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'lib/assets')));
 
 // Fire up the applications
 app.use('/posts',posts);
-// app.use(users);
+app.use('/account', account);
 
 // Run the server
 app.listen(3000);
