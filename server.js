@@ -1,5 +1,11 @@
 // Core requirements
 var express = require('express');
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+var session = require('express-session');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
 
 // Secondary requiremnt
 
@@ -7,7 +13,6 @@ var express = require('express');
 // Require Application
 var posts = require('./lib/posts')
 var users = require('./lib/users')
-
 
 // Express Instanciated
 var app = express();
