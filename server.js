@@ -3,6 +3,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var favicon = require('serve-favicon');
+var path = require('path');
+var logger = require('morgan');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
@@ -17,9 +20,13 @@ var users = require('./lib/users')
 // Express Instanciated
 var app = express();
 
+// Set middlewares
+app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, 'lib/assets')));
+
 // Fire up the applications
-app.use(posts);
-app.use(users);
+app.use('/posts',posts);
+// app.use(users);
 
 // Run the server
 app.listen(3000);
